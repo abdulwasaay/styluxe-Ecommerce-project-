@@ -1,0 +1,27 @@
+.search{
+    width:  500px;
+}
+
+@media (max-width: 1107px){
+    .search{
+        width: 300px;
+    }
+}
+
+@media (max-width: 897px){
+    .search{
+        width: 220px;
+    }
+}
+
+@media (max-width: 762px){
+    .search{
+        width: 300px;
+    }
+}
+
+@media (max-width: 352px){
+    .search{
+        width: 220px;
+    }
+}

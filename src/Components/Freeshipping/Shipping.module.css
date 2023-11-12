@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contain{
+    display: flex;
+    box-shadow: 1px 1px 5px gray;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 20px 10px 20px;
+    margin-top: 20px;
+}
+
+.contain p{
+    
+    line-height: 20px;
+}
+
+.contain h4{
+    margin-bottom: 10px;
+}
+
+.icon{
+    color: palevioletred;
+    font-size: 50px;
+    position: relative;
+    top: 8px;
+    margin-right: 10px;
+}

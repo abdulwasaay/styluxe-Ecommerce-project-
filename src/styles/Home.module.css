@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.heading{
+    margin-left: 70px;
+    font-family: serif;
+    margin-top: 50px;
+}
+.icon{
+    font-size: 36px;
+    position: relative;
+    top: 7px;
+    margin-right: 10px;
+    color: blue;
+}
+@media (max-width: 371px){
+    .heading{
+        margin-left: 30px;
+        font-size: 27px;
+    }
+    .icon{
+        font-size: 30px;
+        margin-right: 5px;
+    }
+}

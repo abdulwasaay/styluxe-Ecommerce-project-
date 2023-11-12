@@ -1,0 +1,80 @@
+.upload{
+    display: none;
+}
+
+.container{
+    width: 400px;
+    position: relative;
+    top: 220px;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    margin-bottom: 80px;
+    
+}
+
+.imageHandle {
+    background-color: rgb(61, 60, 60);
+    width: 160px;
+    height: 160px;
+    color: white;
+    padding: 75px 20px 60px 55px;
+    border-radius: 50%;
+    
+}
+.imageHandle img {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    position: relative;
+    bottom: 75px;
+    right: 55px;
+}
+.label {
+    color: white;
+    position: relative;
+    bottom: 40px;
+    left: 120px;
+    padding: 13px 5px 0px 5px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container form input{
+    width: 300px;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border-color: blue;
+    font-size: 15px;
+}
+
+.container button{
+    font-size: 17;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+@media (max-width: 449px){
+    .container{
+        width: 300px;
+    }
+}
+
+@media (max-width: 362px){
+    .container form input{
+        width: 200px;
+    }
+    .container{
+        width: 240px;
+        margin-left: 20px;
+    }
+}
+

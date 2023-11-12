@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.heading{
+    margin-left: 70px;
+    font-family: serif;
+}
+
+@media (max-width: 371px){
+    .heading{
+        margin-left: 30px;
+        font-size: 27px;
+    }
+}

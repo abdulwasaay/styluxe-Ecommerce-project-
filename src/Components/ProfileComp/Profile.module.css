@@ -1,0 +1,35 @@
+.container form input{
+    display: none;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.idLabel{
+    position: relative;
+    bottom: 100px;
+    left: 150px;
+    background-color: rgb(94, 93, 93);
+    padding: 15px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    padding-top: 20px;
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 3px;
+}
+
+.images{
+    width: 340px;
+    height: 340px;
+    background-color: black;
+    border-radius: 50%;
+    margin-top: 50px;
+    box-shadow: 10px 10px 20px gray;
+}
