@@ -1,4 +1,4 @@
-import { getByEmail, getByPassword } from "@/pages/api/services/Formmethods";
+import { getByEmail, getByPassword } from "@/services/Formmethods";
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 

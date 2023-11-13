@@ -1,5 +1,4 @@
-import { writeData } from "@/pages/api/services/Productmethods";
-
+import { writeData } from "@/services/Productmethods";
 
 export default function handler(req, res) {
   if (req.method!=="POST"){

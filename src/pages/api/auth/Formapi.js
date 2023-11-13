@@ -1,4 +1,4 @@
-import { addData } from "@/pages/api/services/Formmethods";
+import { addData } from "@/services/Formmethods";
 
 export default async function handler(req, res) {
     if (req.method !== "POST"){

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import styles from "./SignupLogincomp.module.css"
 
 export default function Logincomp({onLoginsubmit}) {

@@ -1,4 +1,4 @@
-import { app } from "@/pages/api/firebase";
+import { app } from "@/firebase";
 import { getDatabase, ref, set, onValue ,push} from "firebase/database";
 
 const db = getDatabase(app);

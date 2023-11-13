@@ -1,12 +1,12 @@
 import Heads from "@/Components/Head/Head"
 import ImageSlider from "@/Components/Images/Images";
 import Product from "@/Components/products/Product";
-import { getAlldata } from "@/pages/api/services/Productmethods";
 import { getSession } from "next-auth/react";
 import styles from "@/styles/Home.module.css"
 import CollectionsIcon from '@mui/icons-material/Collections';
 import Shipping from "@/Components/Freeshipping/Shipping";
 import { onValue } from "firebase/database";
+import { getAlldata } from "@/services/Productmethods";
 
 export default function Home(props) {
   const { arr } = props;

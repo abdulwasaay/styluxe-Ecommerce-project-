@@ -1,9 +1,9 @@
 import DashboardComp from "@/Components/Dashboard/DashboardComp";
 import Product from "@/Components/products/Product";
-import { getAlldata } from "@/pages/api/services/Productmethods";
 import { getSession } from "next-auth/react";
 import styles from "./Dashboard.module.css"
 import { onValue } from "firebase/database";
+import { getAlldata } from "@/services/Productmethods";
 
 export default function Dashboard({arr}) {
     const allData = arr.map(p => {
