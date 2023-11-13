@@ -6,18 +6,18 @@ import { useEffect } from "react";
 export default function Login(props) {
     const session = useSession();
     const router = useRouter();
-    const onSubmit = async(email, password) => {
+    const onSubmit = async (email, password) => {
         const data = await signIn("credentials", {
             email, password,
             redirect: false,
         })
-        if (!data.ok){
-            if (data.error === "User doesnot found !" || data.error === "Incorect password !"){
+        if (!data.ok) {
+            if (data.error === "User doesnot found !" || data.error === "Incorect password !") {
                 alert(data.error)
-            }else{
+            } else {
                 alert("Something went wrong, Please try again Later!")
             }
-        }else{
+        } else {
             alert("Login Successfull")
         }
     }
