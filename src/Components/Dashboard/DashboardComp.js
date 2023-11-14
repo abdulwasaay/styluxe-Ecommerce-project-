@@ -41,6 +41,7 @@ export default function DashboardComp() {
         }
     }
     const addProductHandler = async (e) => {
+        e.preventDefault();
         const title = titleRef.current.value;
         const price = priceRef.current.value;
         const id = idRef.current.value;
@@ -65,6 +66,7 @@ export default function DashboardComp() {
             }
             else {
                 alert(data.message)
+                window.location.reload();
             }
         }
     }
@@ -92,7 +94,7 @@ export default function DashboardComp() {
             </div>
 
             <form onSubmit={addProductHandler}>
-                <input type="file" id="upload" className={styles.upload} onChange={imageUpload} />
+                <input type="file" id="upload" className={styles.upload} onChange={imageUpload} required/>
                 <label for="upload" className={styles.label}><CameraAltIcon /></label><br />
                 <input type="text" placeholder="Enter Product Title" ref={titleRef} required /><br />
                 <input type="text" placeholder="Enter Product Price in Dollars" ref={priceRef} required /><br />

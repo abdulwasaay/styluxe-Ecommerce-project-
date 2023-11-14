@@ -1,5 +1,5 @@
 import { app } from "@/firebase";
-import { getDatabase, ref, set, onValue ,push} from "firebase/database";
+import { getDatabase, ref, set, onValue, push } from "firebase/database";
 
 const db = getDatabase(app);
 
@@ -10,27 +10,30 @@ export function getAlldata() {
 }
 
 export function getById(id) {
-    const products = getAlldata();
-    const arr = [];
-    onValue(products, (u) => {
-        for (let key in u.val()) {
-            if (u.val().hasOwnProperty(key)) {
-                arr.push(u.val()[key])
+    return new Promise((resolve, reject) => {
+        const products = getAlldata();
+        const arr = [];
+        onValue(products, (u) => {
+            for (let key in u.val()) {
+                if (u.val().hasOwnProperty(key)) {
+                    arr.push(u.val()[key])
+                }
             }
-        }
+            return resolve(arr.find((u) => u.id === id))
+        }, (error) => {
+            reject(error);
+        });
     });
-    return arr.find((u)=> u.id===id)
-    arr.splice(0)
 }
 
-export function writeData(id,title,price,image) {
-    const found = getById(id)
-    if (found){
+export async function writeData(id, title, price, image) {
+    const found = await getById(id)
+    if (found) {
         throw new Error("This Product Already Exists")
     }
     const db = getDatabase(app);
     const newDocumentRef = push(ref(db, "products"));
-    set(newDocumentRef,{
-        id,title,price,image
+    set(newDocumentRef, {
+        id, title, price, image
     });
 }

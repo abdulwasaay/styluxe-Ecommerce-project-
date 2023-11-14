@@ -12,18 +12,21 @@ export const authOptions = {
 
             async authorize(credentials, req) {
                 const {email,password}=credentials;
-                const user = getByEmail(email);
-                
-                if(!user){
-                    throw new Error("User doesnot found !");
-                }
-                const userPassword = await getByPassword(password,user.password)
-                if(!userPassword){
-                    throw new Error("Incorect password !");
-                }
-                return{
-                    email
-                }
+                const user = await getByEmail(email);
+
+                    if (!user) {
+                        throw new Error("User does not found!");
+                    }
+
+                    const userPassword = await getByPassword(password, user.password);
+
+                    if (!userPassword) {
+                        throw new Error("Incorrect password!");
+                    }
+
+                    return {
+                        email,
+                    };
             }
           })
     ],

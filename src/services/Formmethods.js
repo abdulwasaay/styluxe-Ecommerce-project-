@@ -10,15 +10,20 @@ export function getAll() {
 }
 
 export function getByEmail(email) {
-    const arr = [];
-    const data = getAll();
-    onValue(data, (u) => {
-        for (let key in u.val()) {
-            arr.push(u.val()[key])
-
-        }
+    return new Promise((resolve, reject) => {
+        const data = getAll();
+        const arr = [];
+        onValue(data, (u) => {
+            for (let key in u.val()) {
+                if (u.val().hasOwnProperty(key)) {
+                    arr.push(u.val()[key]);
+                }
+            }
+            resolve(arr.find((u) => u.email.toLowerCase() === email.toLowerCase()));
+        }, (error) => {
+            reject(error);
+        });
     });
-    return arr.find((u)=> u.email.toLowerCase()===email.toLowerCase());
 }
 
 export async function getByPassword(password, hashpassword) {
@@ -27,7 +32,7 @@ export async function getByPassword(password, hashpassword) {
 }
 
 export async function addData(name, email, password, image) {
-    let found = getByEmail(email)
+    let found = await getByEmail(email)
     if (found) {
         throw new Error("User already exists.");
     }

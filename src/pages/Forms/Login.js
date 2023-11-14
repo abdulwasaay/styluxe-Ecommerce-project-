@@ -12,7 +12,7 @@ export default function Login(props) {
             redirect: false,
         })
         if (!data.ok) {
-            if (data.error === "User doesnot found !" || data.error === "Incorect password !") {
+            if (data.error === "User does not found!" || data.error === "Incorrect password!") {
                 alert(data.error)
             } else {
                 alert("Something went wrong, Please try again Later!")
