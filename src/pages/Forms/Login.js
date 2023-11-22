@@ -24,8 +24,7 @@ export default function Login(props) {
     useEffect(() => {
         if (session.status !== "loading") {
             // Redirect to a different page based on the authentication state
-            if (session.status === "authenticated") {
-                console.log(session)
+            if (session.status === "authenticated"){
                 if (session.data.user.email.toLowerCase() === "admin421@gmail.com") {
                     router.push('/Dashboard/Dashboard');
                 } else {

@@ -22,7 +22,7 @@ export default function Dashboard({arr}) {
 
 export async function getServerSideProps({req}){
     const arr=[]
-    const data = getAlldata();
+    const data = await getAlldata();
     onValue(data, (u) => {
         for (let key in u.val()) {
             if (u.val().hasOwnProperty(key)) {
